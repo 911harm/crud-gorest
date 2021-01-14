@@ -24,9 +24,23 @@ body {
   background: transparent;
 }
 
+.btn a {
+  color: white;
+}
+
 .btn:hover {
   font-weight: 700;
   box-shadow: 1px 1px 0 1px black;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form .btn {
+  margin: 0;
+  height: 40px;
 }
 
 .user {

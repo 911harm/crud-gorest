@@ -39,7 +39,7 @@ export default function User({ user, reqList }) {
                     <i onClick={handlerDelete} id={user.id} className="fa fa-trash"></i>
                 </div>
                 <div className="edit">
-                    <Link to={`edit-contact/${user.id}`}>
+                    <Link to={`/edit-contact/${user.id}`}>
                         <i className="fa fa-edit"></i>
                     </Link>
                 </div>

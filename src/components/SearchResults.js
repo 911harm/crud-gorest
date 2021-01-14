@@ -5,17 +5,18 @@ import Global from '../Global'
 import SeachForName from './SeachForName'
 
 
-export default function ListUsers() {
+export default function SearchResults(props) {
     const [listItems, setListItems] = useState([])
+    let name= props.match.params.name
     const reqList = () => {
-        Axios.get(Global.Url)
+        Axios.get(Global.Url+"?name="+name)
             .then(res => {
                 setListItems(res.data.data)
             })
     }
     useEffect(() => {
         reqList()
-    }, [])
+    }, [name])
 
     return (
         <div className="List">
