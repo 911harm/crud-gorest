@@ -10,7 +10,6 @@ export default function AddUser(props) {
     const [email, setEmail] = useState("")
     const handlerSub = (e) => {
         e.preventDefault();
-        console.log(name,email,gender,Userstate)
         Axios.post(Global.Url, {
             name,
             email,
@@ -18,7 +17,6 @@ export default function AddUser(props) {
             status: Userstate
         })
             .then(res => {
-                console.log(res)
                 if (res.data.code === 201) {
                     props.history.push("/")
                     swal("Good job!", `New User Created! with Id ${res.data.data.id}`, "success");
@@ -48,7 +46,7 @@ export default function AddUser(props) {
                     <div className="gender">
                         <p>Please select the gender:</p>
                         <div>
-                            <input onChange={handlerGender} type="radio" name="gender" value="Male" />
+                            <input onChange={handlerGender} type="radio" name="gender" defaultChecked value="Male" />
                             <label htmlFor="Male">Male</label>
                         </div>
                         <div>
@@ -68,7 +66,7 @@ export default function AddUser(props) {
                         </select>
                     </div>
                 </div>
-                <button type="submit"> ADD contact</button>
+                <button className="btn" type="submit"> ADD contact</button>
             </form>
         </div>
     )

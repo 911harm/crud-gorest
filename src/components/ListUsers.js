@@ -6,11 +6,9 @@ import Global from '../Global'
 
 export default function ListUsers() {
     const [listItems, setListItems] = useState([])
-    // const Item = 0
     const reqList = () => {
         Axios.get(Global.Url)
             .then(res => {
-                console.log(res.data)
                 setListItems(res.data.data)
             })
     }
@@ -29,7 +27,7 @@ export default function ListUsers() {
                 </ul>
 
                 :
-                <div>Loading...</div>
+                <div className="spiner">Loading...</div>
             }
 
 

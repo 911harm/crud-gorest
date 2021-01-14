@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 import Global from '../Global'
 
-export default function User({ user,reqList}) {
+export default function User({ user, reqList }) {
     const handlerDelete = (e) => {
-        console.log(e.target.id)
         swal({
             title: "Are you sure?",
             text: "Once deleted, you will not be able to recover this User",
@@ -16,7 +15,7 @@ export default function User({ user,reqList}) {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    Axios.delete(Global.Url+"/"+e.target.id)
+                    Axios.delete(Global.Url + "/" + e.target.id)
                         .then(res => {
                             reqList()
                             return swal("User has been deleted!", {
@@ -41,7 +40,7 @@ export default function User({ user,reqList}) {
                 </div>
                 <div className="edit">
                     <Link to={`edit-contact/${user.id}`}>
-                    <i  className="fa fa-edit"></i>
+                        <i className="fa fa-edit"></i>
                     </Link>
                 </div>
             </div>

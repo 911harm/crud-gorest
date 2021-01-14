@@ -6,12 +6,27 @@
   text-align: center;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
-  color: white;
 }
 
 body {
   background: #2980b9;
   background: linear-gradient(to right, #2c3e50, #2980b9);
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px;
+  color: white;
+  border: 1px solid white;
+  border-radius: .7em;
+  background: transparent;
+}
+
+.btn:hover {
+  font-weight: 700;
+  box-shadow: 1px 1px 0 1px black;
 }
 
 .user {
@@ -43,6 +58,7 @@ body {
 }
 
 .user .actions * {
+  color: white;
   padding: 0px 3px;
 }
 
