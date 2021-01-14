@@ -5,7 +5,7 @@ export default function NavBar() {
     return (
         <div className="navBar">
             <div className="logo">
-            <Link to="./crud-gorest">
+            <Link to="/">
             <i className="fa fa-address-book"></i>
             Contacts
             </Link>
