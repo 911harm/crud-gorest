@@ -1,0 +1,46 @@
+.user {
+  position: relative;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid navy;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.user * {
+  margin: 5px 0;
+  text-align: left;
+}
+
+.user:hover {
+  border: 1px solid white;
+  box-shadow: 1px 1px 0px 2px black;
+}
+
+.user .actions {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.user .actions * {
+  color: white;
+  padding: 0px 3px;
+}
+
+.user .actions .delete i:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+.user .actions .edit:hover {
+  transform: scale(1.2);
+}
+
+.user-name {
+  font-weight: 700;
+}
+/*# sourceMappingURL=User.css.map */

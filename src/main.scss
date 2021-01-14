@@ -13,6 +13,9 @@ body{
     background: linear-gradient(to right, #2c3e50, #2980b9); 
     color:white;
 }
+@import './styles/user.scss';
+@import './styles/navBar.scss';
+@import './styles/addUser.scss';
 // spiner
 .spiner{
     margin-top:20px;
@@ -69,132 +72,13 @@ body{
     }
 }
 
-.user{
-position:relative;
-width: 80%;
-margin:10px auto;
-padding:10px;
-border-radius:10px;
-border:1px solid navy;
-overflow: hidden;
-overflow-wrap: break-word;
-*{
-    margin:5px 0;
-    text-align: left;
-}
-&:hover{
-    border:1px solid white;
-    box-shadow:1px 1px 0px 2px black;
-}
-.actions{
-    display: flex;
-    position: absolute;
-    top:0px;
-    right: 0px;
-    *{
-        color:white;
-        padding:0px 3px;
-    }
-    .delete{
-        i{
-            &:hover{
-                color:red;
-                transform:scale(1.2)
-            }
-
-        }
-    }
-    .edit{
-        &:hover{
-            transform: scale(1.2);
-        }
-    }
-}
-    &-name{
-        font-weight: 700;
-    }
-}
 
 
-// NAvBAr 
-.navBar{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    .logo{
-        cursor: pointer;
-        height: 60px;
-        width: 40%;
-        font-size: 23px;
-        line-height: 60px;
-        a{
-            color:white;
-            i{
-                margin-right: 5px;
-            }
 
-        }
-    }
-    .menu{
-        width: 30%;
-        ul{
-            display: flex;
-            li{
-                padding: 0px 10px;
-                font-weight: 700;
-                a{
-                    color:white;
-                    transition: 400ms all;
 
-                    &:hover{
-                        border-bottom: 2px solid white;
-                        opacity: 0.8;
-                    }
-                }
-            }
 
-        }
-    }
-}
 
-// AddUser
-.addForm{
-    padding-top: 20px;
-    width: 90%;
-    margin:20px auto;
-    border:1px solid white;
-    border-radius: 1em;
-    .status{
-        padding: 10px;
-        select{
-            outline: 0;
-            border: none;
-            border-radius: .2em;
-            margin-left: 2px;
-        }
-    }
-    &-input{
-        display: block;
-        height: 40px;
-        font-size: 20px;
-        width: 90%;
-        margin: 5px auto;
-        border-radius: .5em;
-        outline: 0;
-    }
-    .selectors{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .gender{
-            margin: 5px 10px;
-            *{
-                text-align: left;
-                padding: 3px 0;
-            }
-        }
-    }
-}
+
 @media screen and (min-width:600px){
     .addForm,.search{
         width: 40%;

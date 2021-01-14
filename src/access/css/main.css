@@ -14,64 +14,6 @@ body {
   color: white;
 }
 
-.spiner {
-  margin-top: 20px;
-  display: inline-block;
-  border: 5px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 5px 0px black;
-  border-radius: 50%;
-  border-left: 5px solid #1f9;
-  width: 50px;
-  height: 50px;
-  animation: giro 1s infinite;
-}
-
-@keyframes giro {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.btn {
-  display: inline-block;
-  margin: 10px 0;
-  padding: 10px;
-  color: white;
-  border: 1px solid white;
-  border-radius: .7em;
-  background: transparent;
-}
-
-.btn a {
-  color: white;
-}
-
-.btn-disabled {
-  text-decoration: line-through;
-}
-
-.btn:hover {
-  font-weight: 700;
-  box-shadow: 1px 1px 0 1px black;
-}
-
-.search {
-  padding-top: 10px;
-}
-
-.search-form {
-  display: flex;
-  align-items: center;
-}
-
-.search-form .btn {
-  margin: 0;
-  height: 40px;
-}
-
 .user {
   position: relative;
   width: 80%;
@@ -205,6 +147,64 @@ body {
 .addForm .selectors .gender * {
   text-align: left;
   padding: 3px 0;
+}
+
+.spiner {
+  margin-top: 20px;
+  display: inline-block;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px 0px black;
+  border-radius: 50%;
+  border-left: 5px solid #1f9;
+  width: 50px;
+  height: 50px;
+  animation: giro 1s infinite;
+}
+
+@keyframes giro {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px;
+  color: white;
+  border: 1px solid white;
+  border-radius: .7em;
+  background: transparent;
+}
+
+.btn a {
+  color: white;
+}
+
+.btn-disabled {
+  text-decoration: line-through;
+}
+
+.btn:hover {
+  font-weight: 700;
+  box-shadow: 1px 1px 0 1px black;
+}
+
+.search {
+  padding-top: 10px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form .btn {
+  margin: 0;
+  height: 40px;
 }
 
 @media screen and (min-width: 600px) {

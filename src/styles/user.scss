@@ -1,0 +1,45 @@
+.user{
+    position:relative;
+    width: 80%;
+    margin:10px auto;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid navy;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    *{
+        margin:5px 0;
+        text-align: left;
+    }
+    &:hover{
+        border:1px solid white;
+        box-shadow:1px 1px 0px 2px black;
+    }
+    .actions{
+        display: flex;
+        position: absolute;
+        top:0px;
+        right: 0px;
+        *{
+            color:white;
+            padding:0px 3px;
+        }
+        .delete{
+            i{
+                &:hover{
+                    color:red;
+                    transform:scale(1.2)
+                }
+    
+            }
+        }
+        .edit{
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+        &-name{
+            font-weight: 700;
+        }
+    }

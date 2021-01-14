@@ -1,0 +1,40 @@
+// NAvBAr 
+.navBar{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+        cursor: pointer;
+        height: 60px;
+        width: 40%;
+        font-size: 23px;
+        line-height: 60px;
+        a{
+            color:white;
+            i{
+                margin-right: 5px;
+            }
+
+        }
+    }
+    .menu{
+        width: 30%;
+        ul{
+            display: flex;
+            li{
+                padding: 0px 10px;
+                font-weight: 700;
+                a{
+                    color:white;
+                    transition: 400ms all;
+
+                    &:hover{
+                        border-bottom: 2px solid white;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+        }
+    }
+}

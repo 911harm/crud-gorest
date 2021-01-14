@@ -1,0 +1,45 @@
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar .logo {
+  cursor: pointer;
+  height: 60px;
+  width: 40%;
+  font-size: 23px;
+  line-height: 60px;
+}
+
+.navBar .logo a {
+  color: white;
+}
+
+.navBar .logo a i {
+  margin-right: 5px;
+}
+
+.navBar .menu {
+  width: 30%;
+}
+
+.navBar .menu ul {
+  display: flex;
+}
+
+.navBar .menu ul li {
+  padding: 0px 10px;
+  font-weight: 700;
+}
+
+.navBar .menu ul li a {
+  color: white;
+  transition: 400ms all;
+}
+
+.navBar .menu ul li a:hover {
+  border-bottom: 2px solid white;
+  opacity: 0.8;
+}
+/*# sourceMappingURL=navBar.css.map */

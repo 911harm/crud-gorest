@@ -1,0 +1,38 @@
+// AddUser
+.addForm{
+    padding-top: 20px;
+    width: 90%;
+    margin:20px auto;
+    border:1px solid white;
+    border-radius: 1em;
+    .status{
+        padding: 10px;
+        select{
+            outline: 0;
+            border: none;
+            border-radius: .2em;
+            margin-left: 2px;
+        }
+    }
+    &-input{
+        display: block;
+        height: 40px;
+        font-size: 20px;
+        width: 90%;
+        margin: 5px auto;
+        border-radius: .5em;
+        outline: 0;
+    }
+    .selectors{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .gender{
+            margin: 5px 10px;
+            *{
+                text-align: left;
+                padding: 3px 0;
+            }
+        }
+    }
+}

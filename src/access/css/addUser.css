@@ -1,0 +1,44 @@
+.addForm {
+  padding-top: 20px;
+  width: 90%;
+  margin: 20px auto;
+  border: 1px solid white;
+  border-radius: 1em;
+}
+
+.addForm .status {
+  padding: 10px;
+}
+
+.addForm .status select {
+  outline: 0;
+  border: none;
+  border-radius: .2em;
+  margin-left: 2px;
+}
+
+.addForm-input {
+  display: block;
+  height: 40px;
+  font-size: 20px;
+  width: 90%;
+  margin: 5px auto;
+  border-radius: .5em;
+  outline: 0;
+}
+
+.addForm .selectors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addForm .selectors .gender {
+  margin: 5px 10px;
+}
+
+.addForm .selectors .gender * {
+  text-align: left;
+  padding: 3px 0;
+}
+/*# sourceMappingURL=addUser.css.map */
