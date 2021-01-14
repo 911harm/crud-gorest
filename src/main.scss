@@ -1,0 +1,117 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    list-style: none;
+    text-align: center;
+    text-decoration:none;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+}
+body{
+    background: #2980b9;
+    background: -webkit-linear-gradient(to right, #2c3e50, #2980b9); 
+    background: linear-gradient(to right, #2c3e50, #2980b9); 
+}
+
+
+
+.user{
+position:relative;
+width: 80%;
+margin:10px auto;
+padding:10px;
+border-radius:10px;
+border:1px solid navy;
+overflow: hidden;
+overflow-wrap: break-word;
+*{
+    margin:5px 0;
+    text-align: left;
+}
+&:hover{
+    border:1px solid white;
+    box-shadow:1px 1px 0px 2px black;
+}
+.actions{
+    display: flex;
+    position: absolute;
+    top:0px;
+    right: 0px;
+    *{
+        padding:0px 3px;
+    }
+}
+    &-name{
+        font-weight: 700;
+    }
+}
+
+
+// NAvBAr 
+.navBar{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+        height: 60px;
+        width: 40%;
+        font-size: 23px;
+        line-height: 60px;
+        i{
+            margin-right: 5px;
+        }
+    }
+    .menu{
+        width: 30%;
+        ul{
+            display: flex;
+            li{
+                padding: 0px 10px;
+                font-weight: 700;
+                a{
+                    color:white;
+                    transition: 400ms all;
+
+                    &:hover{
+                        border-bottom: 2px solid white;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// AddUser
+.addForm{
+    width: 90%;
+    margin:20px auto;
+    border:1px solid white;
+    border-radius: 1em;
+    &-input{
+        display: block;
+        height: 40px;
+        font-size: 20px;
+        width: 90%;
+        margin: 5px auto;
+        border-radius: .5em;
+        outline: 0;
+    }
+    .selectors{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .gender{
+            margin: 5px 10px;
+            *{
+                text-align: left;
+                padding: 3px 0;
+            }
+        }
+    }
+}
+@media screen and (min-width:500px){
+
+}
