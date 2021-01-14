@@ -7,16 +7,31 @@ import SeachForName from './SeachForName'
 
 export default function SearchResults(props) {
     const [listItems, setListItems] = useState([])
-    let name= props.match.params.name
+    const [loading, setLoading] = useState(false)
     const reqList = () => {
-        Axios.get(Global.Url+"?name="+name)
+        setLoading(true)
+        Axios.get(Global.Url + "?name=" + name)
             .then(res => {
-                setListItems(res.data.data)
+                if (res.data.data.length === 0) {
+                    // code 200 ! void data
+                    //redirect maybe
+                    console.log(props)
+                    setLoading(false)
+                    setListItems(res.data.data)
+                }
+                else {
+                    setLoading(false)
+                    setListItems(res.data.data)
+                }
             })
+            .catch(() => setLoading(false))
     }
+    let name = props.match.params.name
+
     useEffect(() => {
         reqList()
-    }, [name])
+    }, [name])// eslint-disable-line react-hooks/exhaustive-deps
+
 
     return (
         <div className="List">
@@ -25,12 +40,13 @@ export default function SearchResults(props) {
             {listItems.length !== 0
                 ?
                 <ul>
-
                     {listItems.map(user => <li key={user.id}><User user={user} reqList={reqList}></User></li>)}
                 </ul>
+                : <div>
+                    {loading ? <div className="spiner"></div>
 
-                :
-                <div className="spiner">Loading...</div>
+                        : <div>No hay Resultados...</div>
+                    }</div>
             }
 
 

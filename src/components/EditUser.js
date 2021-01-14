@@ -4,21 +4,26 @@ import Global from '../Global'
 import swal from 'sweetalert';
 
 export default function EditUser(props) {
+    const [loading, setLoading] = useState(false)
     const [name, setName] = useState("")
     const [gender, setGender] = useState("Male")
     const [Userstate, setUserState] = useState("Active")
     const [email, setEmail] = useState("")
     let id = props.match.params.id
     useEffect(() => {
+        setLoading(true)
         Axios.get(Global.Url + "/" + id)
             .then(res => {
+                setLoading(false)
                 setName(res.data.data.name)
                 setGender(res.data.data.gender)
                 setEmail(res.data.data.email)
                 setUserState(res.data.data.status)
-            })
-
-    }, [id])
+            }).catch(()=>{
+                setLoading(false)
+                props.history.push("/")})
+    
+    }, [id])// eslint-disable-line react-hooks/exhaustive-deps
     const handlerSub = (e) => {
         e.preventDefault();
         Axios.patch(Global.Url + "/" + id, {
@@ -43,6 +48,10 @@ export default function EditUser(props) {
     const handlerUserState = (e) => {
         setUserState(e.target.value)
     }
+    if(loading){
+        return  <div className="spiner"></div>
+    }
+    else{
     return (
         <div className="Add-user">
             <h2>Edit User</h2>
@@ -88,5 +97,5 @@ export default function EditUser(props) {
                 <button className="btn" type="submit"> Save</button>
             </form>
         </div>
-    )
+    )}
 }

@@ -5,8 +5,10 @@ export default function NavBar() {
     return (
         <div className="navBar">
             <div className="logo">
+            <Link to="./crud-gorest">
             <i className="fa fa-address-book"></i>
             Contacts
+            </Link>
             </div>
             <nav className="menu">
                 <ul>

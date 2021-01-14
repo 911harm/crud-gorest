@@ -13,6 +13,27 @@ body{
     background: linear-gradient(to right, #2c3e50, #2980b9); 
     color:white;
 }
+// spiner
+.spiner{
+    margin-top:20px;
+    display:inline-block;
+    border:5px solid rgba(0, 0, 0, .1);
+    box-shadow: 0px 0px 5px 0px black;
+    border-radius: 50%;
+    border-left: 5px solid #1f9;
+    width: 50px;
+    height: 50px;
+    animation: giro 1s infinite;
+}
+@keyframes giro{
+    from{
+        transform:rotate(0deg)
+    }
+    to{
+        transform:rotate(360deg)
+    }
+}
+
 // btn
 .btn{
     display: inline-block;
@@ -25,6 +46,9 @@ body{
     a{
         color:white;
     }
+    &-disabled{
+        text-decoration: line-through;
+    }
     &:hover{
         font-weight: 700;
         box-shadow: 1px 1px 0 1px black;
@@ -33,6 +57,7 @@ body{
 }
 // Search
 .search{
+    padding-top: 10px;
     &-form{
         display:flex;
         align-items: center;
@@ -70,6 +95,20 @@ overflow-wrap: break-word;
         color:white;
         padding:0px 3px;
     }
+    .delete{
+        i{
+            &:hover{
+                color:red;
+                transform:scale(1.2)
+            }
+
+        }
+    }
+    .edit{
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
 }
     &-name{
         font-weight: 700;
@@ -83,12 +122,17 @@ overflow-wrap: break-word;
     align-items: center;
     justify-content: space-between;
     .logo{
+        cursor: pointer;
         height: 60px;
         width: 40%;
         font-size: 23px;
         line-height: 60px;
-        i{
-            margin-right: 5px;
+        a{
+            color:white;
+            i{
+                margin-right: 5px;
+            }
+
         }
     }
     .menu{
@@ -115,10 +159,20 @@ overflow-wrap: break-word;
 
 // AddUser
 .addForm{
+    padding-top: 20px;
     width: 90%;
     margin:20px auto;
     border:1px solid white;
     border-radius: 1em;
+    .status{
+        padding: 10px;
+        select{
+            outline: 0;
+            border: none;
+            border-radius: .2em;
+            margin-left: 2px;
+        }
+    }
     &-input{
         display: block;
         height: 40px;
@@ -141,6 +195,14 @@ overflow-wrap: break-word;
         }
     }
 }
-@media screen and (min-width:500px){
+@media screen and (min-width:600px){
+    .addForm,.search{
+        width: 40%;
+        margin:auto;
+    }
+    .content{
+        width: 60%;
+        margin: auto;
+    }
 
 }

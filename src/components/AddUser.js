@@ -59,7 +59,7 @@ export default function AddUser(props) {
                         </div> */}
                     </div>
                     <div className="status">
-                        <label htmlFor="status">Select Status</label>
+                        <label htmlFor="status">Select Status: </label>
                         <select name="status" onChange={handlerUserState}>
                             <option value="Active">Active</option>
                             <option value="Inactive">Inactive</option>

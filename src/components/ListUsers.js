@@ -21,6 +21,7 @@ export default function ListUsers() {
         <div className="List">
             <h1>List Users</h1>
             <SeachForName></SeachForName>
+            <div className="content">
             {listItems.length !== 0
                 ?
                 <ul>
@@ -29,8 +30,9 @@ export default function ListUsers() {
                 </ul>
 
                 :
-                <div className="spiner">Loading...</div>
+                <div className="spiner"></div>
             }
+            </div>
 
 
         </div >
